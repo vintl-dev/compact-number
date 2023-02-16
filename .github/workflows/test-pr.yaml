@@ -5,7 +5,8 @@ on:
     branches: [main, next, alpha, beta, rc]
 
 jobs:
-  release:
+  test:
+    name: Test
     runs-on: ubuntu-latest
 
     if: >-
