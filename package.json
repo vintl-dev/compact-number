@@ -43,7 +43,7 @@
     "dev": "vitest dev",
     "prepack": "pnpm run build",
     "test": "vitest run",
-    "lint": "eslint src --ext .js,.ts",
+    "lint": "eslint . --ext .js,.ts",
     "bt": "pnpm run -s build && pnpm run -s test"
   },
   "dependencies": {
