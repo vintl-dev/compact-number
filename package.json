@@ -17,7 +17,7 @@
   "funding": "https://github.com/Brawaru/Brawaru/blob/main/SUPPORT.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brawaru/compact-number/issues"
+    "url": "https://github.com/brawaru/compact-number.git"
   },
   "license": "MIT",
   "sideEffects": false,
