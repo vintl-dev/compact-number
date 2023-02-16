@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "types": [],
+    "outDir": "./dist",
+    "strictBindCallApply": true
+  },
+  "include": ["./src"]
+}

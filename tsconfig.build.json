@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "module": "CommonJS",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "./build.config.ts",
+    "./vitest.config.ts",
+    "./build",
+    "./test/*.test.ts"
+  ],
+  "exclude": ["./src"]
+}

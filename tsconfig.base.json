@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "strictBindCallApply": true,
+    "importsNotUsedAsValues": "error",
+    "rootDir": "."
+  }
+}
