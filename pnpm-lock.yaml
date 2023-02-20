@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@formatjs/ecma402-abstract': ^1.14.3
   '@formatjs/icu-messageformat-parser': ^2.3.0
-  '@formatjs/intl': ^2.6.6
+  '@formatjs/intl': ^2.6.7
   '@formatjs/intl-localematcher': ^0.2.32
   '@nuxtjs/eslint-config-typescript': ^12.0.0
   '@rollup/plugin-babel': ^6.0.3
@@ -24,7 +24,7 @@ specifiers:
 dependencies:
   '@formatjs/ecma402-abstract': 1.14.3
   '@formatjs/icu-messageformat-parser': 2.3.0
-  '@formatjs/intl': 2.6.6_typescript@4.9.5
+  '@formatjs/intl': 2.6.7_typescript@4.9.5
   '@formatjs/intl-localematcher': 0.2.32
   intl-messageformat: 10.3.1
 
@@ -701,16 +701,16 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@formatjs/intl-displaynames/6.2.5:
-    resolution: {integrity: sha512-Lhu2c0RipMqDKMnr65mry0hHgZ3HVkgvc8PduQ1csoVAfCpWxzdxMkvNyzCe2ybWMTUcbXdoSd2WNXKQahMXDQ==}
+  /@formatjs/intl-displaynames/6.2.6:
+    resolution: {integrity: sha512-scf5AQTk9EjpvPhboo5sizVOvidTdMOnajv9z+0cejvl7JNl9bl/aMrNBgC72UH+bP3l45usPUKAGskV6sNIrA==}
     dependencies:
       '@formatjs/ecma402-abstract': 1.14.3
       '@formatjs/intl-localematcher': 0.2.32
       tslib: 2.5.0
     dev: false
 
-  /@formatjs/intl-listformat/7.1.8:
-    resolution: {integrity: sha512-o1N/+ZtP3o9szRg0TTVcjvrFEE2S028DZ12YY5Kl+MgdG/+jUpOom6SipVP5zNXnQDI6rNKftnhQUoiCQ0RHJg==}
+  /@formatjs/intl-listformat/7.1.9:
+    resolution: {integrity: sha512-5YikxwRqRXTVWVujhswDOTCq6gs+m9IcNbNZLa6FLtyBStAjEsuE2vAU+lPsbz9ZTST57D5fodjIh2JXT6sMWQ==}
     dependencies:
       '@formatjs/ecma402-abstract': 1.14.3
       '@formatjs/intl-localematcher': 0.2.32
@@ -723,8 +723,8 @@ packages:
       tslib: 2.5.0
     dev: false
 
-  /@formatjs/intl/2.6.6_typescript@4.9.5:
-    resolution: {integrity: sha512-a6Pb0JbqgH4zOmt27f0ty9/XeZOuaqg9opmc55+FQ590Ff3SG14VfRwJCBvMs51EF5qbaECM/+oRuxlvfUgYNQ==}
+  /@formatjs/intl/2.6.7_typescript@4.9.5:
+    resolution: {integrity: sha512-9FvEJfUMzlmP5ZBK3EE0928kVsZmD5aeWXg+faP8+mKIvG3c0hkLEXQ2MiUrXQt4rsEzOPbYVtBdthzSM0e2fw==}
     peerDependencies:
       typescript: ^4.7
     peerDependenciesMeta:
@@ -734,8 +734,8 @@ packages:
       '@formatjs/ecma402-abstract': 1.14.3
       '@formatjs/fast-memoize': 1.2.8
       '@formatjs/icu-messageformat-parser': 2.3.0
-      '@formatjs/intl-displaynames': 6.2.5
-      '@formatjs/intl-listformat': 7.1.8
+      '@formatjs/intl-displaynames': 6.2.6
+      '@formatjs/intl-listformat': 7.1.9
       intl-messageformat: 10.3.1
       tslib: 2.5.0
       typescript: 4.9.5

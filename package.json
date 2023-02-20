@@ -67,7 +67,7 @@
     "vitest": "^0.28.5"
   },
   "peerDependencies": {
-    "@formatjs/intl": "^2.6.6",
+    "@formatjs/intl": "^2.6.7",
     "@formatjs/icu-messageformat-parser": "^2.3.0",
     "intl-messageformat": "^10.3.1"
   },
