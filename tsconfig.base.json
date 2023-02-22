@@ -1,9 +1,19 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+
+    "rootDir": ".",
+
     "strict": true,
     "strictBindCallApply": true,
+
     "importsNotUsedAsValues": "error",
-    "rootDir": "."
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+
+    "skipLibCheck": true
   }
 }

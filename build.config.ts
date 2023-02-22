@@ -13,9 +13,6 @@ export default defineBuildConfig({
       outDir: './dist',
     },
   ],
-  rollup: {
-    dts: { tsconfig: './tsconfig.project.json' },
-  },
   hooks: {
     'build:prepare'(ctx) {
       ctx.options.declaration = ctx.options.entries.some(

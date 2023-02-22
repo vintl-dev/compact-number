@@ -32,7 +32,7 @@
     "@typescript-eslint/no-useless-constructor": "warn"
   },
   "parserOptions": {
-    "project": "./tsconfig.project.json"
+    "project": "./tsconfig.json"
   },
   "overrides": [
     {

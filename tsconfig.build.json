@@ -1,15 +1,20 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "emitDeclarationOnly": true,
+    "composite": true,
+
     "module": "CommonJS",
-    "moduleResolution": "node"
+
+    "moduleResolution": "node",
+
+    "esModuleInterop": true,
+
+    "types": ["node"]
   },
   "include": [
     "./build.config.ts",
     "./vitest.config.ts",
-    "./build",
-    "./test/*.test.ts"
-  ],
-  "exclude": ["./src"]
+    "./test/*.test.ts",
+    "./tsconfig.build.json"
+  ]
 }
