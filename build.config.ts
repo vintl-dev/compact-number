@@ -20,8 +20,11 @@ export default defineBuildConfig({
       )
     },
     'rollup:done'(ctx) {
+      const isCI = process.env.ci || process.env.test
       // eslint-disable-next-line no-console
-      console.info(`${chalk.yellow('↯')} Generating locale data...`)
+      console.info(
+        `${isCI ? '[task]' : chalk.yellow('↯')} Generating locale data`,
+      )
 
       const outDir = path.join(process.cwd(), 'dist', 'locale-data')
 
