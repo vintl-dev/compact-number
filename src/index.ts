@@ -32,13 +32,11 @@ export function createFormatter<T>(intl: IntlShape<T>) {
     )
   }
 
-  const getNumberFormat = intl.formatters.getNumberFormat
-
-  function formatCompactNumberBound(...args: FormatCompactNumberParameters) {
-    return formatCompactNumber(getNumberFormat, intl, ...args)
-  }
-
-  return formatCompactNumberBound
+  return formatCompactNumber.bind(
+    undefined,
+    intl.formatters.getNumberFormat,
+    intl,
+  )
 }
 
 interface Normalize {
