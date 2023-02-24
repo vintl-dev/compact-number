@@ -111,12 +111,10 @@ interface WrappedFormatMessage<TBase> {
  *   of the provided {@link IntlShape}, which normalises the return value to
  *   remove all instances of {@link CompactNumber} from it.
  */
-export function wrapFormatMessage<T>(
-  intl: IntlShape<T>,
-): WrappedFormatMessage<T> {
+export function wrapFormatMessage<T>(intl: IntlShape<T>) {
   return function boundFormatMessage(descriptor: any, values: any, opts?: any) {
     return normalize(intl.formatMessage(descriptor, values, opts))
-  }
+  } as WrappedFormatMessage<T>
 }
 
 export { addLocaleData, supportedLocalesOf } from './localeData.js'
