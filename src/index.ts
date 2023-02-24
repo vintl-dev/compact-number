@@ -114,10 +114,8 @@ interface WrappedFormatMessage<TBase> {
 export function wrapFormatMessage<T>(
   intl: IntlShape<T>,
 ): WrappedFormatMessage<T> {
-  const formatMessage = intl.formatMessage
-
   return function boundFormatMessage(descriptor: any, values: any, opts?: any) {
-    return normalize(formatMessage(descriptor, values, opts))
+    return normalize(intl.formatMessage(descriptor, values, opts))
   }
 }
 
