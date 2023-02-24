@@ -23,6 +23,20 @@ type FormatCompactNumberParameters = typeof formatCompactNumber extends (
   ? P
   : never
 
+/**
+ * Represents a formatting function that takes in a number to format, as well as
+ * options that define how the number should be formatted.
+ *
+ * @param value Number to be formatted.
+ * @param options Formatting options.
+ * @returns Compact number object that can be converted to a string or a number.
+ * @see {@link CompactNumber} For more details about the returned object.
+ */
+export type Formatter = (
+  this: void,
+  ...args: FormatCompactNumberParameters
+) => CompactNumber
+
 export function createFormatter<T>(intl: IntlShape<T>) {
   if (supportedLocalesOf(intl.locale).length < 1) {
     intl.onError(
@@ -36,7 +50,7 @@ export function createFormatter<T>(intl: IntlShape<T>) {
     undefined,
     intl.formatters.getNumberFormat,
     intl,
-  )
+  ) as Formatter
 }
 
 interface Normalize {
