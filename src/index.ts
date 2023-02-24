@@ -86,6 +86,7 @@ export const normalize: Normalize = normalizeImpl
 
 interface WrappedFormatMessage<TBase> {
   (
+    this: void,
     descriptor: MessageDescriptor,
     values?: Record<
       string,
@@ -95,6 +96,7 @@ interface WrappedFormatMessage<TBase> {
   ): string
 
   <T extends TBase>(
+    this: void,
     descriptor: MessageDescriptor,
     values?: Record<
       string,
