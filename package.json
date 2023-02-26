@@ -57,7 +57,7 @@
     "@types/node": "^18.14.1",
     "chalk": "^5.2.0",
     "cldr-numbers-modern": "^42.0.0",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "fs-extra": "^11.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-jsdoc": "^0.4.2",
@@ -74,5 +74,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@7.27.1"
+  "packageManager": "pnpm@7.28.0"
 }
