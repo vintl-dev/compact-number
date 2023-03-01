@@ -1,4 +1,4 @@
-# @braw/compact-number
+# @vintl/compact-number
 
 > Pluralisable compact notation numbers using `@formatjs/intl`.
 
@@ -29,27 +29,27 @@ With your package manager of choice:
 **npm**
 
 ```sh
-npm i @braw/compact-number
+npm i @vintl/compact-number
 ```
 
 **pnpm**
 
 ```sh
-pnpm add @braw/compact-number
+pnpm add @vintl/compact-number
 ```
 
 **yarn**
 
 ```sh
-yarn add @braw/compact-number
+yarn add @vintl/compact-number
 ```
 
 ## **Example**
 
 ```jsx
-import { createFormatter } from '@braw/compact-number'
+import { createFormatter } from '@vintl/compact-number'
 import { createIntl } from '@formatjs/intl'
-import '@braw/compact-number/locale-data/en'
+import '@vintl/compact-number/locale-data/en'
 
 const intl = createIntl({ locale: 'en-US' })
 
@@ -119,7 +119,7 @@ if (supportedLocalesOf(['en-US']).length < 1) {
 A function that accepts BCP 47 language tag and locale data object to store for use.
 
 ```ts
-import data from '@braw/compact-number/locale-data/en.data'
+import data from '@vintl/compact-number/locale-data/en.data'
 addLocaleData('en', enData)
 supportedLocalesOf(['en-US'])
 // => ['en']
@@ -143,4 +143,4 @@ In order to accurately round the numbers, CLDR locale data is required.
 
 This module is built with of a subset of locale data provided by the `cldr-numbers-modern` module.
 
-You can auto-add this data using `@braw/compact-number/locale-data/[tag]`.
+You can auto-add this data using `@vintl/compact-number/locale-data/[tag]`.
