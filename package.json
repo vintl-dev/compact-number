@@ -1,14 +1,14 @@
 {
-  "name": "@braw/compact-number",
+  "name": "@vintl/compact-number",
   "version": "1.0.0",
   "description": "Pluralisable compact notation numbers using @formatjs/intl",
   "keywords": [
     "i18n",
     "intl"
   ],
-  "homepage": "https://github.com/brawaru/compact-number",
+  "homepage": "https://github.com/vintl-dev/compact-number",
   "bugs": {
-    "url": "https://github.com/brawaru/compact-number/issues"
+    "url": "https://github.com/vintl-dev/compact-number/issues"
   },
   "author": {
     "name": "Alexander 'Brawaru' Sorokin",
@@ -17,7 +17,7 @@
   "funding": "https://github.com/Brawaru/Brawaru/blob/main/SUPPORT.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brawaru/compact-number.git"
+    "url": "https://github.com/vintl-dev/compact-number.git"
   },
   "license": "MIT",
   "sideEffects": false,
