@@ -180,9 +180,8 @@ import { addLocaleData } from '../index.mjs';
 addLocaleData(${JSON.stringify(locale)}, data);`
 }
 
-const dataFileDTS = `declare const _default: Parameters<
-  typeof import('../index')['addLocaleData']
->[1]
+const dataFileDTS = `import type { addLocaleData } from '../index.mjs'
+declare const _default: Parameters<typeof addLocaleData>[1]
 export default _default`
 
 const exporterFileDTS = 'export {};'
@@ -220,10 +219,10 @@ export function generateLocaleData({
     const numbers = readJSONSync(path.join(localesDir, locale, 'numbers.json'))
 
     output(`${locale}.data.mjs`, generateDataFile(locale, numbers))
-    output(`${locale}.data.d.ts`, dataFileDTS)
+    output(`${locale}.data.d.mts`, dataFileDTS)
 
     output(`${locale}.mjs`, generateESMExporter(locale))
-    output(`${locale}.d.ts`, exporterFileDTS)
+    output(`${locale}.d.mts`, exporterFileDTS)
   }
 
   return writtenFiles
