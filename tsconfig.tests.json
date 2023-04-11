@@ -5,14 +5,14 @@
 
     "module": "ESNext",
 
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
 
     "esModuleInterop": true,
 
-    "types": ["node"]
+    "types": []
   },
   "include": [
-    "./build/*.ts",
-    "./build.config.ts"
+    "./vitest.config.ts",
+    "./test/*.test.ts"
   ]
 }
