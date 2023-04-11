@@ -1,6 +1,10 @@
 import { createIntl, createIntlCache, defineMessages } from '@formatjs/intl'
 import { describe, expect, it, vi } from 'vitest'
-import { createFormatter, wrapFormatMessage, type CompactNumber } from '../dist'
+import {
+  createFormatter,
+  wrapFormatMessage,
+  type CompactNumber,
+} from '../dist/index.mjs'
 
 import '../dist/locale-data/en'
 import '../dist/locale-data/uk'
