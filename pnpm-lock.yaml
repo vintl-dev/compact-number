@@ -34,8 +34,8 @@ devDependencies:
     specifier: ^5.2.0
     version: 5.2.0
   cldr-numbers-modern:
-    specifier: ^42.0.0
-    version: 42.0.0(cldr-core@42.0.0)
+    specifier: ^43.0.0
+    version: 43.0.0(cldr-core@43.0.0)
   eslint:
     specifier: ^8.38.0
     version: 8.38.0
@@ -1632,16 +1632,16 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /cldr-core@42.0.0:
-    resolution: {integrity: sha512-9Sqy6zdOkt3c3A56hpSM9lvMyUM8h78iJ4JzX1u+kQvUz/Vbvqnm8ySxgWfe8lpx1Hrl30dg8NWdTlcKCpLIbg==}
+  /cldr-core@43.0.0:
+    resolution: {integrity: sha512-dPsV6/yTve1tvK2tyOEVkcugOX1MjIWWOlT/IYcHN33IesBykFR5pzUBpKnco7wZxwNGe3+d3tOVQcN+7i9/iA==}
     dev: true
 
-  /cldr-numbers-modern@42.0.0(cldr-core@42.0.0):
-    resolution: {integrity: sha512-jS7mly/5ajwodCqaMKMbgzT5TeM7hT60OxtTHvf4wVf2ibSWm0SZzuquUQ/b0/XNeVWlPVK8x+nNJUwy8ifAnA==}
+  /cldr-numbers-modern@43.0.0(cldr-core@43.0.0):
+    resolution: {integrity: sha512-CBNLVCjzlAEUlJUojtqx4TvpK3ifuOmHTDMwKbQpwWO8GN43iVrBYeLQQ4cKWblbPMueV0tzcE7Ltb1g7MNQ3g==}
     peerDependencies:
-      cldr-core: 42.0.0
+      cldr-core: 43.0.0
     dependencies:
-      cldr-core: 42.0.0
+      cldr-core: 43.0.0
     dev: true
 
   /clean-regexp@1.0.0:
