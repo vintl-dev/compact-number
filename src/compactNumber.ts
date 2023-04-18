@@ -5,12 +5,12 @@ import {
   type NumberFormatInternal,
 } from '@formatjs/ecma402-abstract'
 import {
+  MissingDataError,
   type FormatNumberOptions,
   type Formatters,
-  IntlError,
-  IntlErrorCode,
   type ResolvedIntlConfig,
 } from '@formatjs/intl'
+import { FormatError, ErrorCode } from 'intl-messageformat'
 import { getLocaleData } from './localeData.js'
 import { getFormatter } from './number.js'
 
@@ -54,7 +54,9 @@ function toFakeInternalSlots(nf: Intl.NumberFormat): NumberFormatInternal {
   )
 
   if (localeData == null) {
-    throw new Error(`Missing locale data for locale "${opts.locale}"`)
+    throw new MissingDataError(
+      `Missing locale data for locale "${opts.locale}"`,
+    )
   }
 
   return {
@@ -77,29 +79,25 @@ export function formatCompactNumber(
       ...(options ?? {}),
       notation: 'compact',
     })
-  } catch (e) {
+  } catch {
     onError?.(
-      new IntlError(
-        IntlErrorCode.FORMAT_ERROR,
+      new FormatError(
         'Error creating formatter for the compact number.',
-        e,
+        ErrorCode.MISSING_INTL_API,
       ),
     )
 
     nf = undefined
   }
 
-  const reportError = (err: unknown) =>
-    config.onError(
-      new IntlError(
-        IntlErrorCode.FORMAT_ERROR,
-        'Error formatting the compact number',
-        err,
-      ),
-    )
-
   const ensureFormatter = () => {
-    if (nf == null) throw new Error('Formatter is not initialized')
+    if (nf == null) {
+      throw new FormatError(
+        'Formatter is not initialized',
+        ErrorCode.MISSING_INTL_API,
+      )
+    }
+
     return nf
   }
 
@@ -112,32 +110,27 @@ export function formatCompactNumber(
 
     valueOf(): number {
       if (roundedValue == null) {
-        try {
-          const nf = ensureFormatter()
+        const nf = ensureFormatter()
 
-          const internalSlots = toFakeInternalSlots(nf)
+        const internalSlots = toFakeInternalSlots(nf)
 
-          const [exponent] = ComputeExponent(nf, value, {
-            getInternalSlots() {
-              return internalSlots
-            },
-          })
+        const [exponent] = ComputeExponent(nf, value, {
+          getInternalSlots() {
+            return internalSlots
+          },
+        })
 
-          const numeric =
-            exponent < 0
-              ? value * Math.pow(10, -exponent)
-              : value / Math.pow(10, exponent)
+        const numeric =
+          exponent < 0
+            ? value * Math.pow(10, -exponent)
+            : value / Math.pow(10, exponent)
 
-          const { roundedNumber } = FormatNumericToString(
-            nf.resolvedOptions() as NumberFormatInternal,
-            numeric,
-          )
+        const { roundedNumber } = FormatNumericToString(
+          nf.resolvedOptions() as NumberFormatInternal,
+          numeric,
+        )
 
-          roundedValue = roundedNumber * Math.pow(10, exponent)
-        } catch (err) {
-          reportError(err)
-          roundedValue = value
-        }
+        roundedValue = roundedNumber * Math.pow(10, exponent)
       }
 
       return roundedValue
@@ -145,12 +138,7 @@ export function formatCompactNumber(
 
     toString() {
       if (formattedValue == null) {
-        try {
-          formattedValue = ensureFormatter().format(value)
-        } catch (err) {
-          reportError(err)
-          formattedValue = String(value)
-        }
+        formattedValue = ensureFormatter().format(value)
       }
 
       return formattedValue
@@ -158,17 +146,7 @@ export function formatCompactNumber(
 
     toParts() {
       if (parts == null) {
-        try {
-          parts = ensureFormatter().formatToParts(value)
-        } catch (err) {
-          reportError(err)
-          parts = [
-            {
-              type: 'literal',
-              value: String(value),
-            },
-          ]
-        }
+        parts = ensureFormatter().formatToParts(value)
       }
 
       return parts
