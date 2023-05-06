@@ -20,7 +20,9 @@
     "url": "https://github.com/vintl-dev/compact-number.git"
   },
   "license": "MIT",
-  "sideEffects": false,
+  "sideEffects": [
+    "./dist/locale-data/*.mjs"
+  ],
   "type": "module",
   "exports": {
     ".": {
