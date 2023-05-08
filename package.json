@@ -45,15 +45,15 @@
     "bt": "pnpm run -s build && pnpm run -s test"
   },
   "dependencies": {
-    "@formatjs/ecma402-abstract": "^1.14.3",
+    "@formatjs/ecma402-abstract": "^1.15.0",
     "@formatjs/intl-localematcher": "^0.2.32",
-    "intl-messageformat": "^10.3.4"
+    "intl-messageformat": "^10.3.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@rollup/plugin-babel": "^6.0.3",
     "@types/fs-extra": "^11.0.1",
-    "@types/node": "^18.16.3",
+    "@types/node": "^18.16.4",
     "chalk": "^5.2.0",
     "cldr-numbers-modern": "^43.0.0",
     "eslint": "^8.39.0",
@@ -64,13 +64,13 @@
     "semantic-release": "^21.0.2",
     "typescript": "^5.0.4",
     "unbuild": "^1.2.1",
-    "vitest": "^0.30.1"
+    "vitest": "^0.31.0"
   },
   "peerDependencies": {
-    "@formatjs/intl": "^2.7.1"
+    "@formatjs/intl": "^2.7.2"
   },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@8.3.1"
+  "packageManager": "pnpm@8.4.0"
 }
