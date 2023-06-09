@@ -45,9 +45,9 @@
     "bt": "pnpm run -s build && pnpm run -s test"
   },
   "dependencies": {
-    "@formatjs/ecma402-abstract": "^1.15.0",
-    "@formatjs/intl-localematcher": "^0.2.32",
-    "intl-messageformat": "^10.3.5"
+    "@formatjs/ecma402-abstract": ">=1.14.3 <=1.15.0",
+    "@formatjs/intl-localematcher": ">=0.2.32 <=0.2.32",
+    "intl-messageformat": ">=10.3.4 <=10.3.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
@@ -67,7 +67,7 @@
     "vitest": "^0.31.1"
   },
   "peerDependencies": {
-    "@formatjs/intl": "^2.7.2"
+    "@formatjs/intl": ">=2.7.1 <=2.7.2"
   },
   "publishConfig": {
     "access": "public"
