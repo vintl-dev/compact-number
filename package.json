@@ -45,32 +45,32 @@
     "bt": "pnpm run -s build && pnpm run -s test"
   },
   "dependencies": {
-    "@formatjs/ecma402-abstract": ">=1.14.3 <=1.15.0",
-    "@formatjs/intl-localematcher": ">=0.2.32 <=0.2.32",
-    "intl-messageformat": ">=10.3.4 <=10.3.5"
+    "@formatjs/ecma402-abstract": ">=1.14.3 <=1.17.2",
+    "@formatjs/intl-localematcher": ">=0.2.32 <=0.4.2",
+    "intl-messageformat": ">=10.3.4 <=10.5.3"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@rollup/plugin-babel": "^6.0.3",
-    "@types/fs-extra": "^11.0.1",
-    "@types/node": "^18.16.14",
-    "chalk": "^5.2.0",
-    "cldr-numbers-modern": "^43.0.0",
-    "eslint": "^8.41.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@types/fs-extra": "^11.0.2",
+    "@types/node": "^18.18.4",
+    "chalk": "^5.3.0",
+    "cldr-numbers-modern": "^43.1.0",
+    "eslint": "^8.51.0",
     "fs-extra": "^11.1.1",
-    "pathe": "^1.1.0",
+    "pathe": "^1.1.1",
     "prettier": "^3.0.3",
     "prettier-plugin-jsdoc": "^1.1.1",
     "semantic-release": "^22.0.5",
-    "typescript": "^5.0.4",
+    "typescript": "^5.2.2",
     "unbuild": "^2.0.0",
-    "vitest": "^0.31.1"
+    "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "@formatjs/intl": ">=2.7.1 <=2.7.2"
+    "@formatjs/intl": ">=2.7.1 <=2.9.3"
   },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@8.5.1"
+  "packageManager": "pnpm@8.8.0"
 }
