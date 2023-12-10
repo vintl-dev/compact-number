@@ -53,16 +53,16 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^18.18.9",
+    "@types/node": "^18.19.3",
     "chalk": "^5.3.0",
     "cldr-numbers-modern": "^44.0.1",
-    "eslint": "^8.53.0",
-    "fs-extra": "^11.1.1",
+    "eslint": "^8.55.0",
+    "fs-extra": "^11.2.0",
     "pathe": "^1.1.1",
     "prettier": "^3.1.0",
     "prettier-plugin-jsdoc": "^1.1.1",
-    "semantic-release": "^22.0.7",
-    "typescript": "^5.2.2",
+    "semantic-release": "^22.0.10",
+    "typescript": "^5.3.3",
     "unbuild": "^2.0.0",
     "vitest": "^0.34.6"
   },
@@ -72,5 +72,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@8.10.5"
+  "packageManager": "pnpm@8.11.0"
 }
