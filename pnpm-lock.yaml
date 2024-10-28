@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@formatjs/ecma402-abstract':
-        specifier: ^1.18.3
-        version: 1.18.3
+        specifier: ^2.2.1
+        version: 2.2.1
       '@formatjs/intl':
         specifier: ^2.7.1
         version: 2.7.1(typescript@5.4.5)
@@ -593,17 +593,20 @@ packages:
   '@formatjs/ecma402-abstract@1.14.3':
     resolution: {integrity: sha512-SlsbRC/RX+/zg4AApWIFNDdkLtFbkq3LNoZWXZCE/nHVKqoIJyaoQyge/I0Y38vLxowUn9KTtXgusLD91+orbg==}
 
-  '@formatjs/ecma402-abstract@1.18.3':
-    resolution: {integrity: sha512-J961RbhyjHWeCIv+iOceNxpoZ/qomJOs5lH+rUJCeKNa59gME4KC0LJVMeWODjHsnv/hTH8Hvd6sevzcAzjuaQ==}
-
   '@formatjs/ecma402-abstract@2.0.0':
     resolution: {integrity: sha512-rRqXOqdFmk7RYvj4khklyqzcfQl9vEL/usogncBHRZfZBDOwMGuSRNFl02fu5KGHXdbinju+YXyuR+Nk8xlr/g==}
+
+  '@formatjs/ecma402-abstract@2.2.1':
+    resolution: {integrity: sha512-O4ywpkdJybrjFc9zyL8qK5aklleIAi5O4nYhBVJaOFtCkNrnU+lKFeJOFC48zpsZQmR8Aok2V79hGpHnzbmFpg==}
 
   '@formatjs/fast-memoize@2.0.1':
     resolution: {integrity: sha512-M2GgV+qJn5WJQAYewz7q2Cdl6fobQa69S1AzSM2y0P68ZDbK5cWrJIcPCO395Of1ksftGZoOt4LYCO/j9BKBSA==}
 
   '@formatjs/fast-memoize@2.2.0':
     resolution: {integrity: sha512-hnk/nY8FyrL5YxwP9e4r9dqeM6cAbo8PeU9UjyXojZMNvVad2Z06FAVHyR3Ecw6fza+0GH7vdJgiKIVXTMbSBA==}
+
+  '@formatjs/fast-memoize@2.2.2':
+    resolution: {integrity: sha512-mzxZcS0g1pOzwZTslJOBTmLzDXseMLLvnh25ymRilCm8QLMObsQ7x/rj9GNrH0iUhZMlFisVOD6J1n6WQqpKPQ==}
 
   '@formatjs/icu-messageformat-parser@2.3.1':
     resolution: {integrity: sha512-knF2AkAKN4Upv4oIiKY4Wd/dLH68TNMPgV/tJMu/T6FP9aQwbv8fpj7U3lkyniPaNVxvia56Gxax8MKOjtxLSQ==}
@@ -628,6 +631,9 @@ packages:
 
   '@formatjs/intl-localematcher@0.5.4':
     resolution: {integrity: sha512-zTwEpWOzZ2CiKcB93BLngUX59hQkuZjT2+SAQEscSm52peDW/getsawMcWF1rGRpMCX6D7nSJA3CzJ8gn13N/g==}
+
+  '@formatjs/intl-localematcher@0.5.6':
+    resolution: {integrity: sha512-roz1+Ba5e23AHX6KUAWmLEyTRZegM5YDuxuvkHCyK3RJddf/UXB2f+s7pOMm9ktfPGla0g+mQXOn5vsuYirnaA==}
 
   '@formatjs/intl@2.7.1':
     resolution: {integrity: sha512-se6vxidsN3PCmzqTsDd3YDT4IX9ZySPy39LYhF7x2ssNvlGMOuW3umkrIhKkXB7ZskqsJGY53LVCdiHsSwhGng==}
@@ -1614,6 +1620,7 @@ packages:
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@9.6.1:
@@ -3676,14 +3683,15 @@ snapshots:
       '@formatjs/intl-localematcher': 0.2.32
       tslib: 2.5.0
 
-  '@formatjs/ecma402-abstract@1.18.3':
+  '@formatjs/ecma402-abstract@2.0.0':
     dependencies:
       '@formatjs/intl-localematcher': 0.5.4
       tslib: 2.5.0
 
-  '@formatjs/ecma402-abstract@2.0.0':
+  '@formatjs/ecma402-abstract@2.2.1':
     dependencies:
-      '@formatjs/intl-localematcher': 0.5.4
+      '@formatjs/fast-memoize': 2.2.2
+      '@formatjs/intl-localematcher': 0.5.6
       tslib: 2.5.0
 
   '@formatjs/fast-memoize@2.0.1':
@@ -3691,6 +3699,10 @@ snapshots:
       tslib: 2.5.0
 
   '@formatjs/fast-memoize@2.2.0':
+    dependencies:
+      tslib: 2.5.0
+
+  '@formatjs/fast-memoize@2.2.2':
     dependencies:
       tslib: 2.5.0
 
@@ -3733,6 +3745,10 @@ snapshots:
       tslib: 2.5.0
 
   '@formatjs/intl-localematcher@0.5.4':
+    dependencies:
+      tslib: 2.5.0
+
+  '@formatjs/intl-localematcher@0.5.6':
     dependencies:
       tslib: 2.5.0
 
