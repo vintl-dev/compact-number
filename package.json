@@ -45,7 +45,7 @@
     "bt": "pnpm run -s build && pnpm run -s test"
   },
   "dependencies": {
-    "@formatjs/ecma402-abstract": "^1.18.3",
+    "@formatjs/ecma402-abstract": "^2.2.1",
     "@formatjs/intl-localematcher": "^0.5.4",
     "intl-messageformat": "^10.5.14"
   },
